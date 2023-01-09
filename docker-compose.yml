@@ -1,0 +1,10 @@
+version: '3'
+services:
+  discord_bot:
+    container_name: discord_bot
+    image: asabhi6776/movie_bot:latest
+    restart: always
+    working_dir: /code
+    entrypoint: "python3 bot.py"
+    env_file:
+      - .env
